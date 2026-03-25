@@ -24,10 +24,6 @@ coverage
 .turbo
 *.tsbuildinfo
 
-# Large media — keep on disk locally; do not commit binaries
-public/videos/
-public/thumbnails/
-src/assets/gallery/
 
 # Editor directories and files
 .vscode/*
