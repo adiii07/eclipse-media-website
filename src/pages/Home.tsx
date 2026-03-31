@@ -13,7 +13,7 @@ const artistProjects = [
       "Music video for Kismat by Madhuram Gothalwal - full creative and production",
     videoUrl: "/videos/artists/kismat.mp4",
     projectUrl: "https://www.youtube.com/watch?v=iaNPe3Q0Xa0",
-    poster: "/thumbnails/kismat_cover.png",
+    poster: "/thumbnails/kismat_cover.jpeg",
   },
   {
     id: "artist-2",
@@ -22,7 +22,7 @@ const artistProjects = [
       "An intimate concert film capturing Divyam Sodhi X Khwaab live",
     videoUrl: "/videos/artists/ehsaas.mp4",
     projectUrl: "https://www.instagram.com/p/DUvhxpKierg/",
-    poster: "/thumbnails/ehsaas_thumbnail.jpg",
+    poster: "/thumbnails/ehsaas_thumbnail.jpeg",
   },
   {
     id: "artist-3",
@@ -31,7 +31,7 @@ const artistProjects = [
       "High-octane visuals for Thaikkudam Bridge fusing Navarasam with raw live energy",
     videoUrl: "/videos/artists/navarasam.mp4",
     projectUrl: "https://www.instagram.com/p/DOgQLdFkrqe/",
-    poster: "",
+    poster: "/thumbnails/navarasa_thumbnail.jpeg",
   },
   {
     id: "artist-4",
@@ -40,7 +40,7 @@ const artistProjects = [
       'A documentary concert film exploring Shefali Alvares on and off stage"',
     videoUrl: "/videos/artists/shefali.mp4",
     projectUrl: "https://www.instagram.com/p/DPB3KwFDala/",
-    poster: "/thumbnails/shefali_thumbnail.jpg",
+    poster: "/thumbnails/shefali_thumbnail.jpeg",
   },
   {
     id: "artist-5",
@@ -49,7 +49,7 @@ const artistProjects = [
       "A concert film celebrating Thaikkudam Bridge through the voices of their fans",
     videoUrl: "/videos/artists/thaikkudam_reel.mp4",
     projectUrl: "https://www.instagram.com/p/DOJDQsoEgf6/",
-    poster: "",
+    poster: "/thumbnails/thaikkudum_thumbnail.jpeg",
   },
   {
     id: "artist-6",
@@ -57,7 +57,7 @@ const artistProjects = [
     description: "A feel-good concert film capturing Pho live",
     videoUrl: "/videos/artists/pho.mp4",
     projectUrl: "https://www.instagram.com/p/DLz1p9pT3P1/",
-    poster: "/thumbnails/pho_thumbnail.jpg",
+    poster: "/thumbnails/pho_thumbnail.jpeg",
   },
 ];
 const brandProjects = [
@@ -67,7 +67,7 @@ const brandProjects = [
     description: "A nostalgic tribute to football",
     videoUrl: "/videos/brands/levels.mp4",
     projectUrl: "https://www.instagram.com/reel/DSkkshDj8Ow/",
-    poster: "/thumbnails/levels_thumbnail.png",
+    poster: "/thumbnails/levels_thumbnail.jpeg",
   },
 ];
 
