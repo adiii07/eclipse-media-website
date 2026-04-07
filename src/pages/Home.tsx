@@ -11,7 +11,7 @@ const artistProjects = [
     title: "Madhuram Gothalwal - Kismat",
     description:
       "Music video for Kismat by Madhuram Gothalwal - full creative and production",
-    videoUrl: "https://eclipsemedia.co.in/videos/artists/kismat.mp4",
+    videoUrl: "https://cdn.eclipsemedia.co.in/videos/artists/kismat.mp4",
     projectUrl: "https://www.youtube.com/watch?v=iaNPe3Q0Xa0",
     poster: "/thumbnails/kismat_cover.jpeg",
   },
@@ -20,7 +20,7 @@ const artistProjects = [
     title: "Divyam Sodhi X Khwaab - Ehsaas",
     description:
       "An intimate concert film capturing Divyam Sodhi X Khwaab live",
-    videoUrl: "https://eclipsemedia.co.in/videos/artists/ehsaas.mp4",
+    videoUrl: "https://cdn.eclipsemedia.co.in/videos/artists/ehsaas.mp4",
     projectUrl: "https://www.instagram.com/p/DUvhxpKierg/",
     poster: "/thumbnails/ehsaas_thumbnail.jpeg",
   },
@@ -29,7 +29,7 @@ const artistProjects = [
     title: "Thaikkudam Bridge - Navarasam",
     description:
       "High-octane visuals for Thaikkudam Bridge fusing Navarasam with raw live energy",
-    videoUrl: "https://eclipsemedia.co.in/videos/artists/navarasam.mp4",
+    videoUrl: "https://cdn.eclipsemedia.co.in/videos/artists/navarasam.mp4",
     projectUrl: "https://www.instagram.com/p/DOgQLdFkrqe/",
     poster: "/thumbnails/navarasa_thumbnail.jpeg",
   },
@@ -38,7 +38,7 @@ const artistProjects = [
     title: "Shefali Alvares",
     description:
       'A documentary concert film exploring Shefali Alvares on and off stage"',
-    videoUrl: "https://eclipsemedia.co.in/videos/artists/shefali.mp4",
+    videoUrl: "https://cdn.eclipsemedia.co.in/videos/artists/shefali.mp4",
     projectUrl: "https://www.instagram.com/p/DPB3KwFDala/",
     poster: "/thumbnails/shefali_thumbnail.jpeg",
   },
@@ -47,7 +47,8 @@ const artistProjects = [
     title: "Thaikkudam Bridge",
     description:
       "A concert film celebrating Thaikkudam Bridge through the voices of their fans",
-    videoUrl: "https://eclipsemedia.co.in/videos/artists/thaikkudam_reel.mp4",
+    videoUrl:
+      "https://cdn.eclipsemedia.co.in/videos/artists/thaikkudam_reel.mp4",
     projectUrl: "https://www.instagram.com/p/DOJDQsoEgf6/",
     poster: "/thumbnails/thaikkudum_thumbnail.jpeg",
   },
@@ -55,7 +56,7 @@ const artistProjects = [
     id: "artist-6",
     title: "Pho",
     description: "A feel-good concert film capturing Pho live",
-    videoUrl: "https://eclipsemedia.co.in/videos/artists/pho.mp4",
+    videoUrl: "https://cdn.eclipsemedia.co.in/videos/artists/pho.mp4",
     projectUrl: "https://www.instagram.com/p/DLz1p9pT3P1/",
     poster: "/thumbnails/pho_thumbnail.jpeg",
   },
@@ -65,7 +66,7 @@ const brandProjects = [
     id: "brand-1",
     title: "Levels - Campaign",
     description: "A nostalgic tribute to football",
-    videoUrl: "https://eclipsemedia.co.in/videos/brands/levels.mp4",
+    videoUrl: "https://cdn.eclipsemedia.co.in/videos/brands/levels.mp4",
     projectUrl: "https://www.instagram.com/reel/DSkkshDj8Ow/",
     poster: "/thumbnails/levels_thumbnail.jpeg",
   },
