@@ -141,6 +141,73 @@ function GalleryGridItem({
   );
 }
 
+function ServiceRow({
+  num,
+  label,
+  description,
+}: {
+  num: string;
+  label: string;
+  description: string;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <li
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      className="flex items-start gap-5 px-6 py-5 relative group border-t border-white/10 last:border-b last:border-white/10 cursor-pointer transition-colors duration-200 hover:bg-white/[0.03]"
+    >
+      <span
+        className="absolute left-0 top-0 w-px h-0 bg-white/60
+                   group-hover:h-full transition-all duration-500"
+      />
+      <span className="text-[11px] tracking-wide text-white/25 pt-1 min-w-[20px]">
+        {num}
+      </span>
+      <div className="flex-1 text-center">
+        <p className="text-lg font-light tracking-wide text-white/90">
+          {label}
+        </p>
+        <motion.p
+          initial={false}
+          animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="overflow-hidden text-sm font-light text-white/45 leading-relaxed mt-1"
+        >
+          {description}
+        </motion.p>
+      </div>
+      <motion.span
+        animate={{ rotate: open ? 45 : 0 }}
+        transition={{ duration: 0.3 }}
+        className="text-white/20 text-base pt-1"
+      >
+        +
+      </motion.span>
+    </li>
+  );
+}
+
+const services = [
+  {
+    num: "01",
+    label: "Brand Films",
+    description:
+      "We don't make ads—we tell stories. Brand films built on narrative, not noise.",
+  },
+  {
+    num: "02",
+    label: "Campaign Shoots",
+    description:
+      "Launch campaigns that cut through the noise. From concept to delivery, we create scroll-stopping content that turns viewers into customers.",
+  },
+  {
+    num: "03",
+    label: "Event Coverage",
+    description:
+      "Your event deserves more than a highlight reel. We capture the energy, the emotion, and the story that makes it unforgettable.",
+  },
+];
 /**
  * Homepage with hero section and toggleable project showcases
  */
@@ -319,34 +386,6 @@ export default function Home() {
                 duration: 0.5,
               }}
             >
-              {/* For Brands Services Section */}
-              {activeSection === "brands" && (
-                <motion.div
-                  className="py-12 md:py-16 flex flex-col items-center justify-center px-6 text-center"
-                  initial={{
-                    opacity: 0,
-                    y: 30,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.8,
-                  }}
-                >
-                  <div className="space-y-3">
-                    <h3 className="text-base md:text-lg font-light tracking-widest text-white/60 uppercase mb-4">
-                      Our Services
-                    </h3>
-                    <ul className="space-y-2 text-lg md:text-xl font-light text-white/90">
-                      <li>Brand Films</li>
-                      <li>Campaign Shoots</li>
-                      <li>Event Coverage</li>
-                    </ul>
-                  </div>
-                </motion.div>
-              )}
               {projects.map((project, index) => (
                 <div key={project.id} className="relative w-full h-screen">
                   {/* Video Background */}
@@ -406,6 +445,26 @@ export default function Home() {
             </motion.div>
           </AnimatePresence>
         </section>
+        {/* For Brands Services Section */}
+
+        {activeSection === "brands" && (
+          <motion.div
+            className="py-12 md:py-16 flex flex-col items-center justify-center text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-xl font-light tracking-[0.2em] text-white/40 uppercase mb-8 px-6">
+              Our Services
+            </h3>
+
+            <ul className="w-full">
+              {services.map((service) => (
+                <ServiceRow key={service.label} {...service} />
+              ))}
+            </ul>
+          </motion.div>
+        )}
 
         {/* Photo Gallery Section */}
         <section id="photo-gallery" className="bg-black py-16 md:py-24 px-6">

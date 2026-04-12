@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Mail, Phone, Instagram } from 'lucide-react';
-import { photographerInfo } from '@/data/photographer';
+import { motion, AnimatePresence } from "framer-motion";
+import { X, Mail, Phone, Instagram } from "lucide-react";
+import { photographerInfo } from "@/data/photographer";
 
 interface ContactPanelProps {
   isOpen: boolean;
@@ -24,10 +24,10 @@ export function ContactPanel({ isOpen, onClose }: ContactPanelProps) {
 
           {/* Panel */}
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 30, stiffness: 300 }}
             className="fixed top-0 right-0 h-full w-full sm:w-[450px] bg-black/80 backdrop-blur-lg z-[100] border-l border-white/10"
           >
             <div className="h-full flex flex-col p-8 md:p-12">
@@ -99,7 +99,25 @@ export function ContactPanel({ isOpen, onClose }: ContactPanelProps) {
                     </div>
                   </a>
                 )}
-
+                {/* Phone */}
+                {photographerInfo.phone && (
+                  <a
+                    href={`tel:${photographerInfo.location}`}
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="p-3 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
+                      <Phone className="size-5 text-white/70" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-light tracking-widest text-white/40 uppercase mb-1">
+                        Phone
+                      </p>
+                      <p className="text-white/80 font-light group-hover:text-white transition-colors">
+                        {photographerInfo.location}
+                      </p>
+                    </div>
+                  </a>
+                )}
               </motion.div>
 
               {/* Social Links */}
