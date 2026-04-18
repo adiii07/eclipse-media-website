@@ -16,8 +16,7 @@ interface SEOHeadProps {
 export function SEOHead({ 
   title, 
   description, 
-  // Photo by Oyemike Princewill on Unsplash
-  image = 'https://images.unsplash.com/photo-1662333085102-f6ae3be21c91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjB8&ixlib=rb-4.1.0&q=80&w=1080',
+  image = '/favicon.png',
   type = 'website'
 }: SEOHeadProps) {
   const location = useLocation();
@@ -31,6 +30,7 @@ export function SEOHead({
   
   const baseUrl = window.location.origin;
   const fullUrl = `${baseUrl}${location.pathname}`;
+  const fullImage = image.startsWith('http') ? image : `${baseUrl}${image}`;
 
   useEffect(() => {
     // Update document title
@@ -58,19 +58,19 @@ export function SEOHead({
     updateMetaTag('og:description', fullDescription, true);
     updateMetaTag('og:type', type, true);
     updateMetaTag('og:url', fullUrl, true);
-    updateMetaTag('og:image', image, true);
+    updateMetaTag('og:image', fullImage, true);
     updateMetaTag('og:site_name', photographerInfo.name, true);
     
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
     updateMetaTag('twitter:title', fullTitle);
     updateMetaTag('twitter:description', fullDescription);
-    updateMetaTag('twitter:image', image);
+    updateMetaTag('twitter:image', fullImage);
 
     // Additional SEO tags
     updateMetaTag('author', photographerInfo.name);
     updateMetaTag('keywords', `photography, ${photographerInfo.name}, professional photographer, ${photographerInfo.tagline}`);
-  }, [fullTitle, fullDescription, fullUrl, image, type]);
+  }, [fullTitle, fullDescription, fullUrl, fullImage, type]);
 
   return null;
 }
