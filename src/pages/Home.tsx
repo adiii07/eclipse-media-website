@@ -155,13 +155,13 @@ function ServiceRow({
     <li
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className="flex items-start gap-5 px-6 py-5 relative group border-t border-white/10 last:border-b last:border-white/10 cursor-pointer transition-colors duration-200 hover:bg-white/[0.03]"
+      className="flex items-start gap-5 px-6 py-5 relative group border-t border-white/10 last:border-b last:border-white/10 cursor-pointer transition-colors duration-200 hover:bg-white/"
     >
       <span
         className="absolute left-0 top-0 w-px h-0 bg-white/60
                    group-hover:h-full transition-all duration-500"
       />
-      <span className="text-[11px] tracking-wide text-white/25 pt-1 min-w-[20px]">
+      <span className="text-[11px] tracking-wide text-white/25 pt-1 min-w-5">
         {num}
       </span>
       <div className="flex-1 text-center">
@@ -237,7 +237,7 @@ export default function Home() {
             <img
               src={eclipseHeroBg}
               alt=""
-              className="w-[500px] md:w-[600px] lg:w-[700px] opacity-40 select-none"
+              className="w-125 md:w-150 lg:w-175 opacity-40 select-none"
               draggable={false}
             />
           </div>
@@ -402,7 +402,7 @@ export default function Home() {
                   </video>
 
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-black/40" />
 
                   {/* Project Text Overlay */}
                   <motion.div
@@ -489,7 +489,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extralight tracking-wide text-white mb-12 text-center">
               Our Gallery
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 [grid-auto-rows:auto] grid-flow-dense">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 auto-rows-auto grid-flow-dense">
               {galleryImages.map((imageSrc, i) => (
                 <GalleryGridItem key={imageSrc} imageSrc={imageSrc} index={i} />
               ))}
