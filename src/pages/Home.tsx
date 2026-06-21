@@ -17,6 +17,15 @@ const artistProjects = [
   },
   {
     id: "artist-2",
+    title: "Advaita",
+    description: "A Documentary Celebrating 21 years of Advaita",
+    videoUrl: "https://cdn.eclipsemedia.co.in/videos/artists/advaita.mp4",
+    projectUrl:
+      "https://drive.google.com/file/d/13dsmJzBfN50my2v8N_-TiF2Qtn-N8hsh/view?usp=sharing",
+    poster: "/thumbnails/advaita.jpeg",
+  },
+  {
+    id: "artist-3",
     title: "Divyam Sodhi X Khwaab - Ehsaas",
     description:
       "An intimate concert film capturing Divyam Sodhi X Khwaab live",
@@ -25,7 +34,7 @@ const artistProjects = [
     poster: "/thumbnails/ehsaas_thumbnail.jpeg",
   },
   {
-    id: "artist-3",
+    id: "artist-4",
     title: "Thaikkudam Bridge - Navarasam",
     description:
       "High-octane visuals for Thaikkudam Bridge fusing Navarasam with raw live energy",
@@ -34,7 +43,7 @@ const artistProjects = [
     poster: "/thumbnails/navarasa_thumbnail.jpeg",
   },
   {
-    id: "artist-4",
+    id: "artist-5",
     title: "Shefali Alvares",
     description:
       'A documentary concert film exploring Shefali Alvares on and off stage"',
@@ -43,7 +52,7 @@ const artistProjects = [
     poster: "/thumbnails/shefali_thumbnail.jpeg",
   },
   {
-    id: "artist-5",
+    id: "artist-6",
     title: "Thaikkudam Bridge",
     description:
       "A concert film celebrating Thaikkudam Bridge through the voices of their fans",
@@ -53,7 +62,7 @@ const artistProjects = [
     poster: "/thumbnails/thaikkudum_thumbnail.jpeg",
   },
   {
-    id: "artist-6",
+    id: "artist-7",
     title: "Pho",
     description: "A feel-good concert film capturing Pho live",
     videoUrl: "https://cdn.eclipsemedia.co.in/videos/artists/pho.mp4",
