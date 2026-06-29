@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Instagram, Menu } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { ContactPanel } from './ContactPanel';
 import logo from '@/assets/ECLIPSE_MEDIA2.png';
+import { photographerInfo } from '@/data/photographer';
 
 const navLinks = [
   { name: 'Our Work', targetId: 'project-showcase' },
@@ -96,10 +97,41 @@ export function Header() {
                   Connect
                 </button>
               </motion.div>
+              {photographerInfo.socialLinks?.instagram && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.25 }}
+                >
+                  <a
+                    href={photographerInfo.socialLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="text-white/70 hover:text-white transition-colors duration-300"
+                  >
+                    <Instagram className="size-5" />
+                  </a>
+                </motion.div>
+              )}
             </nav>
 
             {/* Mobile Menu */}
-            <div className="md:hidden flex items-center gap-2">
+            <div className="md:hidden flex items-center gap-3">
+              {photographerInfo.socialLinks?.instagram && (
+                <a
+                  href={photographerInfo.socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className={cn(
+                    'text-white/70 hover:text-white transition-colors',
+                    !isTransparent && 'text-foreground/70 hover:text-foreground'
+                  )}
+                >
+                  <Instagram className="size-5" />
+                </a>
+              )}
               <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
                 <SheetTrigger asChild>
                   <Button
@@ -137,6 +169,18 @@ export function Header() {
                     >
                       Connect
                     </button>
+                    {photographerInfo.socialLinks?.instagram && (
+                      <a
+                        href={photographerInfo.socialLinks.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-lg leading-7 font-light tracking-wide text-foreground hover:text-foreground/80"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        <Instagram className="size-5" />
+                        Instagram
+                      </a>
+                    )}
                   </nav>
                 </SheetContent>
               </Sheet>
